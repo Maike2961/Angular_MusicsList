@@ -4,11 +4,6 @@
     display: grid;
     place-items: center;
     padding: 20px;
-    overflow: auto;
-
-    &::-webkit-scrollbar {
-        width: 0px;
-    }
 
 }
     .container {
@@ -18,5 +13,4 @@
         box-shadow: 29px 29px 43px #181819,
             -29px -29px 43px #363839;
         padding: 20px;
-        width: 500px;
     }

@@ -1,11 +1,6 @@
 {
   "musics": [
     {
-      "id": "1",
-      "author": "Guns N' Roses",
-      "text": "Civil War"
-    },
-    {
       "id": "2",
       "author": "AC/DC",
       "text": "Highway to Hell"
@@ -13,7 +8,7 @@
     {
       "id": "3",
       "author": "Led Zeppelin",
-      "text": "Whole Lotta Love"
+      "text": "Whole Lotta Love "
     },
     {
       "id": "5",
@@ -29,6 +24,16 @@
       "id": "51e6",
       "author": "three days grace",
       "text": "Get Out Alive"
+    },
+    {
+      "id": "bfa2",
+      "author": "thousant suns",
+      "text": "might wings"
+    },
+    {
+      "id": "aa34",
+      "author": "black sabbath",
+      "text": "paranoid"
     }
   ]
 }

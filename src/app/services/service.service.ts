@@ -22,4 +22,8 @@ export class ServiceService {
   putData(musica: Musica): Observable<Musica>{
     return this.http.put<Musica>(`${this.apiUrl}/${musica.id}`, musica)
   }
+
+  deleteData(musica: Musica): Observable<Musica>{
+    return this.http.delete<Musica>(`${this.apiUrl}/${musica.id}`)
+  }
 }

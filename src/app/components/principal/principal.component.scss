@@ -1,0 +1,57 @@
+table{
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+table th{
+    text-align: center;
+}
+
+table td{
+    text-align: center;
+    padding: .50rem;
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    height: 15rem;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+form .forms{
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+
+    .inputs{
+        padding: 0 1rem;
+        outline: none;
+        margin: 0 1rem;
+        border: none;
+        border-bottom: 1px solid white;
+    }
+}
+
+
+
+form .button{
+    text-align: center;
+
+    .style{
+        padding: .80rem .80rem;
+        cursor: pointer;
+        border-radius: 5rem;
+
+    }
+}
+
+.style{
+    padding: .80rem .80rem;
+    cursor: pointer;
+    border-radius: 5rem;
+
+}

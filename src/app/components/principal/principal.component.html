@@ -1,2 +1,51 @@
-<app-principal-add (AddMusica)="AddNovaMusica($event)"></app-principal-add>
-<app-principal-items *ngFor="let music of musica" [sons]="music"></app-principal-items>
+@if(mostrarForm){
+    <app-btn text="fechar" color="red" (click)="VisualizarForm(false)"></app-btn>
+}@else {
+    <app-btn text="abrir" color="green" (click)="VisualizarForm(true)"></app-btn>
+}
+
+<form (ngSubmit)="OnSubmit()" *ngIf="mostrarForm">
+    <div class="forms">
+        <label for="id">ID:</label>
+        <input type="text" name="id" class="inputs" disabled [(ngModel)]='id' />
+    </div>
+
+    <div class="forms">
+        <label for="nome">Author:</label>
+        <input type="text" name="author" class="inputs" placeholder="Adicione um Author" [(ngModel)]="author">
+    </div>
+
+    <div class="forms">
+        <label for="nome">Musica:</label>
+        <input type="text" name="musica" class="inputs" placeholder="Adicione uma Musica" [(ngModel)]="musicas">
+    </div>
+
+    <div class="button">
+        @if(salvarEditar){
+            <input type="submit" value="Salvar" class="style">
+        }@else{
+            <input type="submit" value="Editar" class="style">
+        }
+    </div>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Musica</th>
+            <th>....</th>
+            <th>....</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let music of musica; index as i">
+            <td>{{i + 1 }}</td>
+            <td>{{music.author}}</td>
+            <td>{{music.text}}</td>
+            <td><button (click)="PreencherForm(music)" class="style" [disabled]="!salvarEditar">Alterar</button></td>
+            <td><Button (click)="DeleteMusica(music)" class="style"  [disabled]="!salvarEditar">Deletar</Button></td>
+        </tr>
+    </tbody>
+</table>

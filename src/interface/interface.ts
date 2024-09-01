@@ -1,5 +1,5 @@
 export interface Musica{
-    id?: number,
+    id?: string,
     author: string,
     text: string,
 }
